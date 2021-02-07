@@ -3,6 +3,7 @@
     height: 60px;
     padding: 0 48px;
     align-items: center;
+    background-color: rgb(235, 235, 194);
 }
 
 .create-event-btn {
@@ -15,7 +16,7 @@
 
 .navigation {
     &__today-btn {
-        margin-left: 32px;
+        margin-left: 50px;
         padding: 0 16px;
     }
 

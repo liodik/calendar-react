@@ -47,3 +47,20 @@ export const months = [
     'November',
     'December'
 ];
+
+
+
+// my func
+
+export const displayedMonth = (weekStartDate, months) => {
+    const dateCopy = new Date(weekStartDate);
+    const weekEndDate = new Date(dateCopy.setDate(dateCopy.getDate() + 6));
+   if (weekStartDate.getMonth() === weekEndDate.getMonth()) {
+       return months[weekStartDate.getMonth()]
+   }  else if ((weekStartDate.getMonth() !== weekEndDate.getMonth()) && 
+   (weekStartDate.getMonth()===11)) {
+       return `${months[weekStartDate.getMonth()]} - ${months[0]}`
+   } else {
+       return `${months[weekStartDate.getMonth()]} - ${months[weekStartDate.getMonth() +1 ]}`
+   }
+}
